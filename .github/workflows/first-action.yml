@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: my first step
         run: |
-          echo "Hello World" ++ {{job.status}} ++ {{job.id}} 
+          echo "Hello World" ++ ${{github.event_name}}
           echo "This is my first workflow"
           echo "I am learning GitHub Actions"
   my-second-job:
