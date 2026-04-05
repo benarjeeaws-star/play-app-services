@@ -1,0 +1,20 @@
+name: 'my "first" workflow'
+on: workflow_dispatch
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my first step
+        run: |
+          echo "Hello World" ++ {{job.status}} ++ {{job.id}} 
+          echo "This is my first workflow"
+          echo "I am learning GitHub Actions"
+  my-second-job:
+    runs-on: ubuntu-latest
+    needs: my-first-job
+    steps:
+      - name: my second step
+        run: |
+          echo "This is my second job"
+          echo "It runs after the first job"
+          echo "I am learning GitHub Actions"        
