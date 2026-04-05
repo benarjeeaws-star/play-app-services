@@ -15,6 +15,6 @@ jobs:
     steps:
       - name: my second step
         run: |
-          echo This is my second job name is ${{github.workflow}} and Job name is ${{github.job}}  event is ${{github.event}} action is ${{github.action}} action status is ${{github.action_status}}
+          echo This is my second job name is ${{github.workflow}} and Job name is ${{github.job}}  event is ${{github.event}} action is ${{github.action}} action status is ${{github.actor}}
           echo "It runs after the first job"
           echo "I am learning GitHub Actions"        
